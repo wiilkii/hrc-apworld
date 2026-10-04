@@ -41,4 +41,4 @@ class HorseRidingClassicWorld(World):
         return items.get_random_filler_item_name(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return {}
+        return {"victory_item_id": items.ITEM_NAME_TO_ID["nom nom nom"]}

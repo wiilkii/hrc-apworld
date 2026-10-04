@@ -122,7 +122,6 @@ def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | No
 
 def create_all_locations(world: HorseRidingClassicWorld) -> None:
     create_regular_locations(world)
-    # create_events(world)
 
 def create_regular_locations(world: HorseRidingClassicWorld) -> None:
     forest = world.get_region("Forest")
@@ -639,8 +638,4 @@ def create_regular_locations(world: HorseRidingClassicWorld) -> None:
         world.player, "Golden Apple", world.location_name_to_id["Golden Apple"], glue
     )
     glue.locations.append(golden_apple)
-    golden_apple.place_locked_item(world.create_item("Golden Apple"))
-
-# this is basically for logic rules that aren't going to be randomized
-# def create_events(world: HorseRidingClassicWorld) -> None:
-#     return # fill this out in a few
+    golden_apple.place_locked_item(world.create_item("nom nom nom"))

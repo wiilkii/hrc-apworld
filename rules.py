@@ -269,6 +269,6 @@ def set_all_location_rules(world: HorseRidingClassicWorld) -> None:
 
 
 def set_completion_rules(world: HorseRidingClassicWorld) -> None:
-    world.set_completion_rule(Has("Golden Apple"))
+    world.set_completion_rule(Has("nom nom nom"))
     
 

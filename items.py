@@ -15,7 +15,7 @@ ITEM_NAME_TO_ID = {
     "DesertKey": 3,
     "CityKey": 4,
     "GlueKey": 5,
-    "Golden Apple": 6,
+    "nom nom nom": 6,
 }
 
 DEFAULT_ITEM_CLASSIFICATIONS = {
@@ -24,7 +24,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "DesertKey": ItemClassification.progression,
     "CityKey": ItemClassification.progression,
     "GlueKey": ItemClassification.progression,
-    "Golden Apple": ItemClassification.progression,
+    "nom nom nom": ItemClassification.progression,
 }
 
 class HorseRidingClassicItem(Item):
