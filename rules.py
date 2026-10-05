@@ -24,10 +24,10 @@ def set_all_entrance_rules(world: HorseRidingClassicWorld) -> None:
     farm_to_glue = world.get_entrance("Farm to Glue")
     city_to_glue = world.get_entrance("City to Glue")
 
-    can_go_to_desert = Has("DesertKey", world.player)
-    can_go_to_farm = Has("FarmKey", world.player)
-    can_go_to_city = Has("CityKey", world.player)
-    can_go_to_glue = Has("GlueKey", world.player)
+    can_go_to_desert = Has("DesertKey")
+    can_go_to_farm = Has("FarmKey")
+    can_go_to_city = Has("CityKey")
+    can_go_to_glue = Has("GlueKey")
 
     world.set_rule(forest_to_desert, can_go_to_desert)
     world.set_rule(forest_to_farm, can_go_to_farm)

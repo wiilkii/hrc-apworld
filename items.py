@@ -16,6 +16,7 @@ ITEM_NAME_TO_ID = {
     "CityKey": 4,
     "GlueKey": 5,
     "nom nom nom": 6,
+    "sugarcube (no effect)": 7
 }
 
 DEFAULT_ITEM_CLASSIFICATIONS = {
@@ -25,12 +26,15 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "CityKey": ItemClassification.progression,
     "GlueKey": ItemClassification.progression,
     "nom nom nom": ItemClassification.progression,
+    "sugarcube (no effect)": ItemClassification.filler
 }
 
 class HorseRidingClassicItem(Item):
     game = "Horse Riding Classic"
 
 def get_random_filler_item_name(world: HorseRidingClassicWorld) -> str:
+    if world.random.randint(0, 99) < 90:
+        return "sugarcube (no effect)"
     return "ProgressiveBreed"
 
 def create_item_with_correct_classification(world: HorseRidingClassicWorld, name: str) -> HorseRidingClassicItem:
@@ -40,12 +44,17 @@ def create_item_with_correct_classification(world: HorseRidingClassicWorld, name
 
 def create_all_items(world: HorseRidingClassicWorld) -> None:
     itempool: list[Item] = [
-        world.create_item("ProgressiveBreed"),
         world.create_item("FarmKey"),
         world.create_item("DesertKey"),
         world.create_item("CityKey"),
-        world.create_item("GlueKey")
+        world.create_item("GlueKey"),
+        world.create_item("nom nom nom"),
+        world.create_item("sugarcube (no effect)")
     ]
+
+    for i in range(20):
+        itempool.append(world.create_item("ProgressiveBreed"))
+    
 
     number_of_items = len(itempool)
 
